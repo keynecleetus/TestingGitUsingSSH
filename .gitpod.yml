@@ -5,5 +5,11 @@ tasks:
       chmod 600 ~/.ssh/id_rsa &&
       ssh-keyscan github.com >> ~/.ssh/known_hosts
   - init: git remote set-url origin git@github.com:keynecleetus/TestingGitUsingSSH.git
+  - name: Set Git Public API Key   
+    command: >-
+          curl -X POST -H 'Content-type: application/vnd.github+json' 
+          -H "Authorization: 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" 
+          --data '{"title":"Gitpod API","key":@~/.ssh/id_rsa.pub
+          }' https://api.github.com/user/keys
 
            
