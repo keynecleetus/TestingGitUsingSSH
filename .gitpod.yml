@@ -8,7 +8,7 @@ tasks:
   - name: Set Git Public API Key   
     command: >-
           curl -X POST -H 'Content-type: application/vnd.github+json' 
-          -H "Authorization: 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" 
+          -H "Authorization: auth token" 
           --data '{"title":"Gitpod API","key":@~/.ssh/id_rsa.pub
           }' https://api.github.com/user/keys
 
