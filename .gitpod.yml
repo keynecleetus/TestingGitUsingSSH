@@ -1,0 +1,7 @@
+tasks:
+  - before: >
+      echo $SSH_PUBLIC_KEY > ~/.ssh/id_rsa.pub &&
+      chmod 644 ~/.ssh/id_rsa.pub
+  - init: git remote set-url origin git@github.com:keynecleetus/TestingGitUsingSSH.git
+
+           
