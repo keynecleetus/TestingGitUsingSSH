@@ -2,6 +2,8 @@ tasks:
   - before: >
       echo $SSH_PUBLIC_KEY > ~/.ssh/id_rsa.pub &&
       chmod 644 ~/.ssh/id_rsa.pub &&
+      echo $SSH_PRIVATE_KEY > ~/.ssh/id_rsa &&
+      chmod 600 ~/.ssh/id_rsa &&
       ssh-keyscan github.com >> ~/.ssh/known_hosts
   - init: git remote set-url origin git@github.com:keynecleetus/TestingGitUsingSSH.git
 
